@@ -1,0 +1,27 @@
+:root {--bg:#0f172a;--accent:#06b6d4;--muted:#94a3b8;--success:#16a34a;--danger:#ef4444;}
+*{box-sizing:border-box;font-family:Inter,Segoe UI,Arial,sans-serif}
+body {
+  margin: 0;
+  background: url("https://wallpapers.com/images/hd/hollow-knight-blue-butterflies-htthva79qwf3msbg.webp") no-repeat center center fixed;
+  background-size: cover;
+  color: #e6eef6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+.container{width:100%;max-width:980px;background:rgba(255,255,255,0.02);border-radius:12px;padding:20px;box-shadow:0 8px 30px rgba(2,6,23,0.7)}
+header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.controls{display:flex;gap:8px;align-items:center}
+select{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 10px;border-radius:8px;color:var(--muted)}
+button{background:var(--accent);border:none;padding:8px 12px;border-radius:8px;color:#012;cursor:pointer;font-weight:600}
+.panel{display:grid;grid-template-columns:1fr 320px;gap:18px}
+.problem{font-size:44px;font-weight:700;text-align:center;padding:18px 10px;border-radius:8px;background:rgba(255,255,255,0.02);margin-bottom:10px}
+.answer{font-size:22px;padding:10px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);width:180px;text-align:center;background:transparent;color:inherit}
+.keyboard{margin-top:12px;display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.key{width:56px;height:46px;border-radius:6px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);font-weight:700}
+.key.active{background:linear-gradient(90deg,var(--accent),#7dd3fc);color:#012;box-shadow:0 6px 18px rgba(3,105,161,0.25);transform:translateY(-3px)}
+.correct{color:var(--success);font-weight:700}.wrong{color:var(--danger);font-weight:700}
+footer{padding-top:10px;text-align:center;color:var(--muted);font-size:13px}
+@media(max-width:880px){.panel{grid-template-columns:1fr}.key{width:48px}}

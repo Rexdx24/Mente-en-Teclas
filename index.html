@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mente en Teclas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>CB STUDIOS: MENTE EN TECLAS</h1>
+      <div class="controls">
+        <label>Dificultad</label>
+        <select id="level">
+          <option value="easy">Fácil (0-9)</option>
+          <option value="mid">Intermedio (0-20)</option>
+          <option value="hard">Difícil (0-99)</option>
+        </select>
+        <label>Cantidad de Preguntas</label>
+        <select id="count">
+          <option>10</option><option>20</option><option>30</option>
+        </select>
+        <button id="startBtn">Iniciar</button>
+      </div>
+    </header>
+    <div class="panel">
+      <section class="game">
+        <div class="problem" id="problem">Presiona <strong>Iniciar</strong></div>
+        <div class="input-row">
+          <input id="answer" class="answer" inputmode="numeric" autocomplete="off" placeholder="Escribe la respuesta" disabled />
+          <button id="submitBtn" disabled>Enter</button>
+        </div>
+        <div class="info">
+          <div class="stat">Pregunta: <span id="progress">0/0</span></div>
+          <div class="stat">Correctas: <span id="correct">0</span></div>
+          <div class="stat">Incorrectas: <span id="wrong">0</span></div>
+          <div class="stat">Tiempo total: <span id="elapsed">0.0s</span></div>
+        </div>
+        <div class="results" id="feedback">Respuesta rápida: escribe y presiona <strong>Enter</strong></div>
+        <div class="keyboard" id="keyboard"></div>
+      </section>
+      <aside>
+        <div class="results">
+          <div style="font-weight:700;margin-bottom:6px">Resultados</div>
+          <div>Nivel: <span id="summaryLevel">-</span></div>
+          <div>Preguntas: <span id="summaryCount">-</span></div>
+          <div>Precisión: <span id="accuracy">-</span></div>
+          <div>Keystrokes/min: <span id="cpm">-</span></div>
+          <div>Promedio: <span id="avgTime">-</span></div>
+        </div>
+      </aside>
+    </div>
+    <footer>Desarrollado para practicar sumas y restas rápidas para los bolivarianos ¡SEAMOS BUENOS ESTUDIANTES!</footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
